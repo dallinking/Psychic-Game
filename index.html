@@ -10,16 +10,70 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="description" content="">
+    <!--<link rel="stylesheet" type="text/css" href="/assets/css/reset.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/assets/css/style.css"> -->
 </head>
 
 <body>
 
+    <h1><strong>The Psychic Game</strong></h1>
+    <p>Guess what letter I'm thinking of.</p>
+    <p>Wins: <span id="wins">0</span></p>
+    <p>Losses: <span id="losses">0</span></p>
+    <p>Guesses Left: <span id="guessesLeft">0</span></p>
+    <p>Your Guesses so far: <span id="yourGuessesSoFar">0</span></p>
 
-    <script src="assets/javascript/game.js" async defer></script>
+
+
+    <!---   <script src="assets/javascript/game.js" async defer></script>    -->
+    <script type="text/javascript">
+        //baseline for random options
+        const computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q",
+            "r", "s", "t", "u", "v", "w", "x", "y", "z"
+        ]
+        //to dynamically tie to html
+        let docWins = document.getElementById("wins")
+        let docLosses = document.getElementById("losses")
+        let docGessLeft = document.getElementById("guessestLeft")
+        let docGuessesSoFar = document.getElementById("yourGuessesSoFar")
+
+        //need to figure out how to do a random letter.. this:
+        let autoLetterSelected = computerChoices[Math.floor(Math.random() * 26)]
+
+        //need to store users one-time guess in a variable separate from all previously guessed variables.  Believe I need to do some form of push for the 'all letters guessed'.
+
+        let letterGuessed = //onkeyup? (single most recent user entered keyboard stroke that's a letter)
+            let allLettersGuessed = //this is where I'm thinking the push comes in..?  What lesson is that in?
+
+
+                userText.textContent = event.key;
+
+
+        if (autoLetterSelected = ) {
+            alert("you win!")
+            Wins++
+        } else()
+
+
+
+
+        //pseudo code:
+        //  1) generalte a random array item from the computerChoices variable
+        //      a) use random number between 0 & 25 to index the array for random number.
+        //      a) reset that variable if guessLeft = 0
+        //  2) Print out the letters the user is typing out separated by commas
+        //  3) If letter user guesses is the random selected letter, 
+        //      a)increase wins by 1, 
+        //      b)generate a new letter, 
+        //      c)set guesses left to 9
+        //      d)clear guesses
+        //  4) If letter user guesses is not the random selected letter
+        //      a) add letter to list guessesSoFar variable
+        //      b) decrease guessesLeft by 1
+    </script>
+
 </body>
 
 </html>
